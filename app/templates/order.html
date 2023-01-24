@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block title %}
+	Order
+{% endblock %}
+
+{% block head %}
+	{{ super() }}
+  <link rel="stylesheet" href="{{ url_for('static', filename='order_style.css') }}">
+{% endblock %}
+
+{% block individualnavs %}
+  <li class="nav-item">
+    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/gallery">Gallery</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="/order">Order</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/blog">Blog</a>
+  </li>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <center>
+    <h1> Contact Us</h1>
+    <p>Tell us more about yourself and what you're looking for and we'll get back to you ASAP!</p>
+  </center>
+  <hr>
+  <form>
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" id="firstName" placeholder="First Name">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input type="email" class="form-control" id="email" placeholder="Email">
+      </div>
+      <div class="col">
+        <input type="tel" class="form-control" id="phoneNumber" placeholder="Phone Number">
+      </div>
+    </div>
+    <div class="form-outline mb-4">
+      <textarea class="form-control" rows="5"></textarea>
+    </div>
+    <button type="submit" class="btn btn-secondary">Submit</button>
+  </form>
+</div>
+{% endblock %}

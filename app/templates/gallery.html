@@ -1,19 +1,19 @@
 {% extends "layout.html" %}
 {% block title %}
-	Homepage
+	Gallery
 {% endblock %}
 
 {% block head %}
 	{{ super() }}
-	<link rel="stylesheet" href="{{ url_for('static', filename='home_style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='gallery_style.css') }}">
 {% endblock %}
 
 {% block individualnavs %}
   <li class="nav-item">
-    <a class="nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="/gallery">Gallery</a>
+    <a class="nav-link active" href="/gallery">Gallery</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="/order">Order</a>
@@ -22,5 +22,6 @@
     <a class="nav-link" href="/blog">Blog</a>
   </li>
 {% endblock %}
+
 {% block content %}
 {% endblock %}
